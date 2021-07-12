@@ -5,9 +5,9 @@ import 'page_tracker_aware.dart';
 // 废弃
 class TrackerPageWidget extends StatefulWidget {
 
-  final Widget child;
+  final Widget? child;
 
-  const TrackerPageWidget({Key key, this.child}):
+  const TrackerPageWidget({Key? key, this.child}):
       assert(child != null),
       super(key: key);
 
@@ -20,7 +20,7 @@ class TrackerPageWidget extends StatefulWidget {
 class _State extends State<TrackerPageWidget> with PageTrackerAware, TrackerPageMixin {
   @override
   Widget build(BuildContext context) {
-    return widget.child;
+    return widget.child??Container();
   }
 
   @override
